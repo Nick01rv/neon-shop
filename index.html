@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI & Digital HUB - Премиум Ресурси</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Навигация -->
+    <header id="main-header">
+        <div class="logo">NEON.AI</div>
+        <nav id="nav-menu">
+            <ul>
+                <li><a href="#" class="active">Начало</a></li>
+                <li><a href="#products">Продукти</a></li>
+                <li><a href="#checkout-section">Поръчка</a></li>
+            </ul>
+        </nav>
+        <a href="#products" class="btn">Виж каталога</a>
+    </header>
+
+    <!-- Главна Секция -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Увеличете продуктивността си с <span>AI Шаблони</span></h1>
+            <p>Премиум prompt-ове, готови автоматизации и дигитални ресурси от ново поколение. Купи веднъж, ползвай завинаги.</p>
+            <a href="#products" class="btn">Вземи пакет сега</a>
+        </div>
+        <div class="hero-visual">
+            <div class="sphere-glow"></div>
+        </div>
+    </section>
+
+    <!-- Секция Дигитални Продукти -->
+    <section class="products" id="products">
+        <h2>Топ AI Пакети</h2>
+        <div class="products-grid">
+            <!-- Продукт 1 -->
+            <div class="product-card">
+                <div class="product-img">🤖</div>
+                <h3>ChatGPT Ultimate Prompt Pack</h3>
+                <p>Над 500+ професионални команди за маркетинг, копирайтинг и бизнес автоматизация.</p>
+                <div class="product-footer">
+                    <span class="price">19.99 €.</span>
+                    <a href="https://nikolaradnev.gumroad.com/l/urnrd" class="btn" target="_blank">Избери</a>
+                </div>
+            </div>
+            <!-- Продукт 2 -->
+                   <!-- Продукт 2 -->
+        <div class="product-card">
+            <div class="product-img">🎨</div>
+            <h3>Midjourney Master V6 Prompts</h3>
+            <p>Готови кодове за генериране на хиперреалистични изображения и лога за брандове.</p>
+            <div class="product-footer">
+                <span class="price">49.99 €</span>
+                <a href="https://nikolaradnev.gumroad.com/l/wpjpk" class="btn" target="_blank">Избери</a>
+            </div>
+        </div>
+
+        </div>
+    </section>
+
+    <!-- СЕКЦИЯ ЗА ПЛАЩАНЕ (Модул за поръчка) -->
+    <section class="checkout" id="checkout-section" style="display: none;">
+        <div class="checkout-container">
+            <h2>Оформяне на поръчката</h2>
+            <p>Избран продукт: <strong id="selected-product-name">-</strong></p>
+            <p>Обща сума: <strong id="selected-product-price">-</strong></p>
+            
+            <form id="payment-form">
+                <input type="text" id="client-name" placeholder="Твоите имена" required>
+                <input type="email" id="client-email" placeholder="Твоят Имейл (където ще пратим файла)" required>
+                
+                <!-- Имитация на Stripe поле за карта -->
+                <div class="card-input-emulation">
+                    💳 &nbsp; <input type="text" placeholder="Номер на карта" required style="width: 70%; border:none; background:transparent; color:#fff;">
+                </div>
+                
+                <button type="submit" class="btn" style="width: 100%; margin-top: 20px;">Плати и Изтегли</button>
+            </form>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>

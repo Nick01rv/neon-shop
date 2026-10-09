@@ -1,0 +1,280 @@
+/* 1. Базови настройки и Нулиране */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Roboto, sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #080b11;
+    color: #f3f4f6;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* 2. Навигационна лента (Header) */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 8%;
+    background: transparent;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    transition: all 0.4s ease;
+}
+
+header.scrolled {
+    padding: 15px 8%;
+    background: rgba(8, 11, 17, 0.9);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 800;
+    background: linear-gradient(45deg, #00f2fe, #4facfe, #9b51e0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 35px;
+}
+
+nav ul li a {
+    color: #94a3b8;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover, nav ul li a.active {
+    color: #00f2fe;
+}
+
+/* 3. Универсални Бутони */
+.btn {
+    background: linear-gradient(45deg, #00f2fe, #4facfe);
+    color: #080b11;
+    padding: 12px 28px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 242, 254, 0.35);
+}
+
+/* 4. Главна Секция (Hero) */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 120px 8% 60px 8%;
+    gap: 50px;
+}
+
+.hero-content {
+    flex: 1;
+    max-width: 600px;
+}
+
+.hero-content h1 {
+    font-size: 58px;
+    font-weight: 800;
+    line-height: 1.15;
+    margin-bottom: 25px;
+}
+
+.hero-content h1 span {
+    background: linear-gradient(45deg, #00f2fe, #9b51e0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero-content p {
+    font-size: 18px;
+    color: #94a3b8;
+    margin-bottom: 40px;
+}
+
+.hero-visual {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.sphere-glow {
+    width: 350px;
+    height: 350px;
+    background: linear-gradient(45deg, rgba(0, 242, 254, 0.15), rgba(155, 81, 224, 0.15));
+    border-radius: 50%;
+    position: relative;
+    animation: float 6s ease-in-out infinite;
+    box-shadow: 0 0 80px rgba(0, 242, 254, 0.1);
+}
+
+/* 5. Секция Дигитални Продукти */
+.products {
+    padding: 100px 8%;
+    background: #0c0f17;
+    text-align: center;
+}
+
+.products h2 {
+    font-size: 36px;
+    margin-bottom: 50px;
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.product-card {
+    background: #111622;
+    padding: 25px;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.02);
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.product-img {
+    height: 180px;
+    background: #182032;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 64px;
+    margin-bottom: 20px;
+}
+
+.product-card h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.product-card p {
+    color: #94a3b8;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.product-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.price {
+    font-size: 18px;
+    font-weight: 700;
+    color: #00f2fe;
+}
+
+.buy-btn {
+    padding: 8px 20px;
+    font-size: 14px;
+}
+
+/* 6. Касова Форма (Checkout) */
+.checkout {
+    padding: 80px 8%;
+    background: #080b11;
+    display: flex;
+    justify-content: center;
+}
+
+.checkout-container {
+    background: #111622;
+    padding: 40px;
+    border-radius: 20px;
+    max-width: 500px;
+    width: 100%;
+    border: 1px solid rgba(0, 242, 254, 0.2);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.5);
+}
+
+.checkout-container h2 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.checkout-container p {
+    margin-bottom: 10px;
+    color: #94a3b8;
+}
+
+.checkout-container strong {
+    color: #00f2fe;
+}
+
+form input {
+    width: 100%;
+    padding: 15px;
+    margin-top: 15px;
+    background: #182032;
+    border: 1px solid rgba(255,255,255,0.05);
+    border-radius: 10px;
+    color: #fff;
+    font-size: 16px;
+}
+
+form input:focus {
+    border-color: #00f2fe;
+    outline: none;
+}
+
+.card-input-emulation {
+    margin-top: 15px;
+    padding: 15px;
+    background: #182032;
+    border: 1px solid rgba(255,255,255,0.05);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+}
+
+/* Анимации */
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+}
+
+/* Мобилна Адаптивност */
+@media (max-width: 968px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding-top: 140px;
+    }
+    .hero-content h1 { font-size: 40px; }
+    .sphere-glow { width: 250px; height: 250px; }
+    nav { display: none; }
+}
